@@ -28,6 +28,7 @@ const Header = () => {
                         </button>
                     </div>
                 </div>
+                
                 {/* Right */}
                 <div className='flex items-center space-x-3'>
                     <button className='hidden lg:flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl hover:shadow-lg transition-all '>
