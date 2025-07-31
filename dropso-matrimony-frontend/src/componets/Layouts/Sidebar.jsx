@@ -29,7 +29,7 @@ const menuItem = [
     ]
   }
 ]
-const Sidebar = () => {
+const Sidebar = ({collapsed,onToggle,currentPage,onPageChange}) => {
   return (
     <div className=' w-72 transition duration-300 ease-in-out bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-r border-slate-200/50 dark:border-slate-700/50 flex flex-col relative z-10'>
       <div className='p-6 border-b border-slate-200/50 dark:border-slate-700/50'>
@@ -70,11 +70,11 @@ const Sidebar = () => {
                 {item.submenu && <ChevronDown className='w-4 h-4 transition-transform' />}
               </button>
               {/* Submenus */}
-              <div className='ml-8 mt-2 space-y-1'>
-                {item.submenu.map((item)=>{
-                  return <button>{}</button>
+              {/* <div className='ml-8 mt-2 space-y-1'>
+                {item.submenu.map((subItem)=>{
+                  return <button>{subItem.label}</button>
                 })}
-              </div>
+              </div> */}
             </div>
           )
 
